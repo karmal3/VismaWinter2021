@@ -18,7 +18,8 @@ body {
 
 .todo-container {
     width: 100%;
-    background: #c8cbda; 
+    background: #c8cbda;
+    padding-bottom: 1px; 
 }
 .todo-header {
     width: 100%;
@@ -39,7 +40,6 @@ body {
     border-radius: 25px;
 }
 .itemslist:hover{
-    background: #d8d8d8;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .taskname{
@@ -106,7 +106,19 @@ input[type=text],[type=datetime-local]{
 input{
     outline: none;
 }
-
+.closebtn {
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .closebtn:hover {
+    color: rgb(255, 0, 0);
+  }
 @media only screen and (min-width: 768px) {  
     body {
         background: #E5E5E5;
@@ -115,9 +127,7 @@ input{
     .todo-container {
         width: 50%;
         margin: 0px auto;
-        padding-bottom: 10px;
-        background: #c8cbda;
-        
+        background: #c8cbda; 
     }
     .todo-header {
         width: 100%;
@@ -133,17 +143,4 @@ input{
         position: relative;  
     }
 }
-.closebtn {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .closebtn:hover {
-    color: rgb(255, 0, 0);
-  }
   
