@@ -95,16 +95,14 @@ function completedTask(index) {
     var checkboxes = document.querySelectorAll("input[type=checkbox]");
     let webtask = sessionStorage.getItem("allTodos");
     let taskObj = JSON.parse(webtask);
-
-    if (checkboxes[index].checked == true) {
-        if (index != null) {
-            taskObj[index]['isCompleted'] = true;
+    
+        if (checkboxes[index].checked == true) {    
+                taskObj[index]['isCompleted'] = true;
+                console.log(index)
+        } else {
+            taskObj[index]['isCompleted'] = false;
             console.log(index)
-        }
-    } else {
-        taskObj[index]['isCompleted'] = false;
-        console.log(index)
-    }
+        } 
     sessionStorage.setItem("allTodos", JSON.stringify(taskObj));
     displayTasks();
 }
